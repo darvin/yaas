@@ -43,9 +43,7 @@
       "components/angular*/angular*.js",
       "test/vendor/chai.js",
       "test/vendor/angular-mock.js",
-      "build/development/js/*.js",
-  
-
+      "build/development/js/*.js"
       ]
   }
 }
