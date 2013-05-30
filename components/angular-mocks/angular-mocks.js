@@ -1633,7 +1633,6 @@ window.jstestdriver && (function(window) {
   };
 })(window);
 
-
 window.jasmine && (function(window) {
 
   afterEach(function() {

@@ -28,8 +28,10 @@
     "browserify-shim": "~2.0.3",
     "grunt-browserify2": "~0.1.5",
     "grunt-coffeeify": "~0.1.1",
-    "mocha": "~1.7.4"
+    "mocha": "git://github.com/darvin/mocha.git#patch-1",
+    "chai": "git://github.com/chaijs/chai.git"
   },
+
   "testling": {
     "browsers": [
         "chrome/22"
