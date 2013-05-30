@@ -1,3 +1,5 @@
+[![browser support](https://ci.testling.com/darvin/yaas.png)](https://ci.testling.com/darvin/yaas)
+
 # yaas - yet another angular seed
 
 
