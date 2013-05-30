@@ -36,16 +36,14 @@
     ],
     "harness" : "mocha",
     "files": [
-      "test/js/**/*.js",
+      "test/js/**/*.js"
       ],
     "scripts": [
       "components/angular/angular.js",
       "components/angular*/angular*.js",
       "test/vendor/chai.js",
       "test/vendor/angular-mock.js",
-      "build/development/js/*.js",
-  
-
+      "build/development/js/*.js"
       ]
   }
 }
