@@ -13,8 +13,6 @@
  *
  * Namespace from 'angular-mocks.js' which contains testing related code.
  */
-
-var angular = require('angular');
 angular.mock = {};
 
 /**
@@ -1636,6 +1634,7 @@ window.jstestdriver && (function(window) {
 })(window);
 
 
+window.jasmine && (function(window) {
 
   afterEach(function() {
     var spec = getCurrentSpec();
@@ -1690,7 +1689,7 @@ window.jstestdriver && (function(window) {
    *        aliases or as anonymous module initialization functions. The modules are used to
    *        configure the injector. The 'ng' and 'ngMock' modules are automatically loaded.
    */
-  global.module = angular.mock.module = function() {
+  window.module = angular.mock.module = function() {
     var moduleFns = Array.prototype.slice.call(arguments, 0);
     return isSpecRunning() ? workFn() : workFn;
     /////////////////////
@@ -1760,8 +1759,7 @@ window.jstestdriver && (function(window) {
    *
    * @param {...Function} fns any number of functions which will be injected using the injector.
    */
-   console.error("running");
-  global.inject = angular.mock.inject = function() {
+  window.inject = angular.mock.inject = function() {
     var blockFns = Array.prototype.slice.call(arguments, 0);
     var errorForStack = new Error('Declaration Location');
     return isSpecRunning() ? workFn() : workFn;
@@ -1787,3 +1785,4 @@ window.jstestdriver && (function(window) {
       }
     }
   };
+})(window);
