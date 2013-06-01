@@ -81,6 +81,9 @@ module.exports = (grunt) ->
       less:
         files: ['app/assets/style/*.less']
         tasks: 'jade:development'
+      tests:
+        files: ['test/**']
+        tasks: 'build:test'
 
     karma:
       options:
@@ -109,7 +112,6 @@ module.exports = (grunt) ->
   grunt.loadNpmTasks 'grunt-browserify2'
 
   # Aliases
-  grunt.registerTask 'config', 'coffee:config'
   grunt.registerTask 'development', [
     'clean:development'
     'copy:development'
@@ -129,7 +131,6 @@ module.exports = (grunt) ->
   grunt.registerTask 'test', ['build:test', 'karma']
 
   grunt.registerTask 'default', [
-    'config'
     'development'
 #    'test'
     'connect:server'
