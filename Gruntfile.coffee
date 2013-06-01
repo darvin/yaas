@@ -22,7 +22,7 @@ module.exports = (grunt) ->
         beforeHook: (bundle)->
           bundle.transform coffeeify
       test:
-        entry: './test/support/test.coffee'
+        entry: './test/support/test.js'
         compile: './build/test/test.js'
         debug: yes
         beforeHook: (bundle)->
