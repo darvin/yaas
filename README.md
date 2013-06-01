@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/darvin/peerjs.png?branch=master)](https://travis-ci.org/darvin/peerjs)
+
 [![browser support](https://ci.testling.com/darvin/yaas.png)](https://ci.testling.com/darvin/yaas)
 
 # yaas - yet another angular seed
