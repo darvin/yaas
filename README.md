@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/darvin/peerjs.png?branch=master)](https://travis-ci.org/darvin/peerjs)
+[![Build Status](https://travis-ci.org/darvin/yaas.png?branch=master)](https://travis-ci.org/darvin/yaas)
 
 [![browser support](https://ci.testling.com/darvin/yaas.png)](https://ci.testling.com/darvin/yaas)
 
