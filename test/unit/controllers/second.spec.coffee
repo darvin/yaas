@@ -1,9 +1,6 @@
 'use strict'
 
-# mocha specs for the second controller goes here
-
-# load chai assert
-expect = chai.expect
+{expect, module, inject} = require '../../support/setup.coffee'
 
 
 describe 'controller:second', ->

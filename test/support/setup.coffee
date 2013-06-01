@@ -3,15 +3,16 @@
 
 chai = require 'chai'
 
-require '../../components/angular/angular.js', {expose: 'angular'}
-require '../../components/angular-cookies/angular-cookies.js'
-require '../../components/angular-resource/angular-resource.js'
+require 'angular-browserify'
+require 'angular-browserify/mocks'
 
+require '../../app/app.coffee'
 
-window.jasmine = true;
-
-require '../../components/angular-mocks/angular-mocks.js'
-
+module.exports = 
+  expect: chai.expect
+  module: angular.mock.module
+  inject: angular.mock.inject
+  
 
 
 

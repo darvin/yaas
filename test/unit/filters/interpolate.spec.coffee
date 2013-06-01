@@ -1,9 +1,6 @@
 'use strict'
 
-# mocha specs for the interpolate filter goes here
-
-# load chai expect
-expect = chai.expect
+{expect, module, inject} = require '../../support/setup.coffee'
 
 
 describe 'filter:interpolate', ->

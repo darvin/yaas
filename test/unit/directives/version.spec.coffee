@@ -1,9 +1,6 @@
 'use strict'
 
-# mocha specs for the version directive goes here
-
-# load chai expect
-expect = chai.expect
+{expect, module, inject} = require '../../support/setup.coffee'
 
 
 describe 'directive:version', ->

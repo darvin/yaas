@@ -4,9 +4,9 @@
 
 'use strict'
 
-angular = require 'angular'
-require 'angular-cookies'
-require 'angular-resource'
+require 'angular-browserify'
+require 'angular-browserify/cookies'
+require 'angular-browserify/resource'
 
 routes = require './routes.coffee'
 

@@ -1,11 +1,7 @@
 'use strict'
 
 
-
-# mocha specs for the app controller goes here
-
-# load chai assert
-{expect} = require '/Users/darvin/Projects/yaas/test/support/setup.coffee'
+{expect, module, inject} = require '../../support/setup.coffee'
 
 
 describe 'controller:app', ->
@@ -13,8 +9,8 @@ describe 'controller:app', ->
   AppController = scope = null
   
   beforeEach ->
-    angular.mock.module('app.controllers')
-    angular.mock.inject ($rootScope, $controller) ->
+    module('app.controllers')
+    inject ($rootScope, $controller) ->
       scope = $rootScope.$new()
       AppController = $controller('AppController', $scope: scope)
       

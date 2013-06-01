@@ -1,6 +1,5 @@
 # Browserify requires
 coffeeify = require 'coffeeify'
-shim = require 'browserify-shim'
 
 module.exports = (grunt) ->
 
@@ -22,19 +21,14 @@ module.exports = (grunt) ->
         debug: yes
         beforeHook: (bundle)->
           bundle.transform coffeeify
-          shim bundle,
-            angular:
-              path: './components/angular/angular.js'
-              exports: 'angular'
-            'angular-cookies':
-              path: './components/angular-cookies/angular-cookies.js'
-              exports: null
-              depends: angular: 'angular'
-            'angular-resource':
-              path: './components/angular-resource/angular-resource.js'
-              exports: null
-              depends: angular: 'angular'
+      test:
+        entry: './test/support/test.coffee'
+        compile: './build/test/test.js'
+        debug: yes
+        beforeHook: (bundle)->
+          bundle.transform coffeeify
 
+          
     coffee:
       config:
         options:
@@ -82,7 +76,11 @@ module.exports = (grunt) ->
         src: 'font/*'
         dest: 'build/development'
         expand: true
-
+      test:
+        files: [
+          {expand: true, cwd: 'test/support/',  src: 'test.html', dest:'build/test/' }
+          {expand: true, cwd: 'node_modules/mocha/', src: [ 'mocha.css', 'mocha.js' ], dest:'build/test/' }
+        ]
     watch:
       coffee:
         files: ['app/*.coffee', 'app/**/*.coffee']
@@ -133,7 +131,12 @@ module.exports = (grunt) ->
     'less:development'
   ]
 
-  grunt.registerTask 'test', 'karma'
+  # grunt.registerTask 'test', 'karma'
+
+  grunt.registerTask 'build:test', [
+    'browserify2:test'
+    'copy:test'
+  ]
 
   grunt.registerTask 'default', [
     'config'
