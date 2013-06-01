@@ -23,13 +23,10 @@ autoWatch = false
 browsers = ['PhantomJS']
 
 # Auto run tests on start (when browsers are captured) and exit
-singleRun = false
 
 # cli runner port
 runnerPort = 9201
 
-# web server port
-port = 9878
 
 # use dots reporter, as travis terminal does not support escaping sequences
 # possible values: 'dots' || 'progress'
@@ -39,10 +36,7 @@ proxies = {
   '/': 'http://localhost:8002/'
 }
 
-junitReporter = {
-  outputFile: 'test_out/e2e.xml',
-  suite: 'e2e'
-}
+
 
 preprocessors = 
   '**/*.coffee': 'coffee'

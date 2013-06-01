@@ -87,15 +87,16 @@ module.exports = (grunt) ->
 
     karma:
       options:
-        keepalive: false
+        singleRun: true,
       unit:
         runnerPort: 9201
         configFile: 'config/karma/unit.coffee'
+      ###
       e2e:
         runnerPort: 9202
         configFile: 'config/karma/e2e.coffee'
 
-
+      ###
 
   # Dependencies
   grunt.loadNpmTasks 'grunt-contrib-concat'
