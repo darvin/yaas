@@ -40,6 +40,6 @@
         "chrome/22"
     ],
     "harness" : "mocha-bdd",
-    "files": "test/support/test.coffee"
+    "files": "test/unit/**/*.coffee"
   }
 }
