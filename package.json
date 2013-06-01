@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "description": "yet another anuglar.js seed app",
   "scripts": {
-    "test": "grunt test"
+    "test": "./node_modules/.bin/grunt test"
   },
   "repository": {
     "type": "git",
