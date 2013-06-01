@@ -7,12 +7,7 @@ basePath = '../../'
 files = [
   MOCHA
   MOCHA_ADAPTER
-  'vendor/script/angular/angular.js'  
-  'test/vendor/chai.js'
-  'vendor/script/angular/angular-*.js'
-  'test/vendor/angular-mock.js'
-  'build/development/js/*.js'
-  'test/unit/**/*.coffee'
+  'build/test/test.js'
 ]
 
 # enable / disable watching file and executing tests whenever any file changes

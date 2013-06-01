@@ -29,17 +29,7 @@ module.exports = (grunt) ->
           bundle.transform coffeeify
 
           
-    coffee:
-      config:
-        options:
-          bare: true
-        files: [
-          expand: true
-          cwd: 'config'
-          src: ['**/*.coffee']
-          dest: 'config'
-          ext: '.js'
-        ]
+    coffee: {}
 
     less:
       development:
@@ -91,19 +81,16 @@ module.exports = (grunt) ->
       less:
         files: ['app/assets/style/*.less']
         tasks: 'jade:development'
-      config:
-        files: ['config/karma/*.coffee']
-        tasks: 'coffee:config'
 
     karma:
       options:
         keepalive: false
       unit:
         runnerPort: 9201
-        configFile: 'config/karma/unit.js'
+        configFile: 'config/karma/unit.coffee'
       e2e:
         runnerPort: 9202
-        configFile: 'config/karma/e2e.js'
+        configFile: 'config/karma/e2e.coffee'
 
 
 
@@ -137,6 +124,9 @@ module.exports = (grunt) ->
     'browserify2:test'
     'copy:test'
   ]
+
+
+  grunt.registerTask 'test', ['build:test', 'karma']
 
   grunt.registerTask 'default', [
     'config'
