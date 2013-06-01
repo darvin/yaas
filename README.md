@@ -18,7 +18,8 @@ When it's setup it will make your development live much easier. You will be able
 * [Jade](http://jade-lang.com/) for the templates
 * [Phantomjs](http://phantomjs.org/) for the headless
 * [Mocha](http://visionmedia.github.com/mocha/) and [Chai](http://chaijs.com/) for the tests
-* [Bower](http://twitter.github.com/bower/) for dependencies
+* [npm](https://npmjs.org/) for code dependencies
+* [Bower](http://twitter.github.com/bower/) for non-code dependencies
 
 ## How do I get it?
 Install it via
@@ -26,6 +27,7 @@ Install it via
 $ git clone https://github.com/Dignifiedquire/yaas.git
 $ cd yaas
 $ npm install
+$ bower install
 ```
 If you want to use PhantomJS you need to get it [here](http://phantomjs.org/download.html).
 
@@ -35,6 +37,7 @@ If you want to use PhantomJS you need to get it [here](http://phantomjs.org/down
 build/
   dev/
   prod/
+  test/
 app/
   assets/
     style/
@@ -50,11 +53,7 @@ app/
   app.coffee
 config/
   karma/
-vendor/
-  img/
-  font/
-  script/
-  style/
+test/
 ```
 
 ## How does this magic happen?
