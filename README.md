@@ -1,12 +1,9 @@
 [![Build Status](https://travis-ci.org/darvin/yaas.png?branch=master)](https://travis-ci.org/darvin/yaas)
 
-[![browser support](https://ci.testling.com/darvin/yaas.png)](https://ci.testling.com/darvin/yaas)
+[![Selenium Test Status](https://saucelabs.com/browser-matrix/yaas.svg)](https://saucelabs.com/u/yaas)
 
 # yaas - yet another angular seed
 
-
-## Why?
-Because I'm not satisfied with the seeds out there. [Yeoman](http://yeoman.io) isn't working for me yet and it's Windows support leaves much desired.
 
 
 

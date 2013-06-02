@@ -115,18 +115,35 @@ module.exports = (grunt) ->
           build: process.env.TRAVIS_JOB_ID,
           concurrency: 3,
           browsers: [
-            {
-              browserName: 'firefox',
-              platform: 'XP'
-            }
-            {
-              browserName: 'chrome',
-              platform: 'XP'
-            }
-            {
-              browserName: 'chrome',
-              platform: 'linux'
-            }
+            { browserName: 'firefox', version: "21" }
+            { browserName: 'firefox', version: "20" }
+            { browserName: 'firefox', version: "19" }
+            { browserName: 'firefox', version: "18" }
+            { browserName: 'firefox', version: "17" }
+            { browserName: 'firefox', version: "16" }
+            { browserName: 'firefox', version: "15" }
+            { browserName: 'firefox', version: "14" }
+            { browserName: 'firefox', version: "13" }
+            { browserName: 'firefox', version: "12" }
+            { browserName: 'firefox', version: "11" }
+            { browserName: 'firefox', version: "10" }
+            { browserName: 'opera', version: "11" }
+            { browserName: 'opera', version: "12" }
+            { browserName: 'chrome' }
+            { browserName: 'safari', version: "5" }
+            { browserName: 'safari', version: "6" }
+            { browserName: 'android' }
+            { browserName: 'iPhone', version: "6" }
+            { browserName: 'iPhone', version: "5.1" }
+            { browserName: 'iPhone', version: "5" }
+            { browserName: 'iPhone', version: "4.3" }
+            { browserName: 'iPad' }
+            { browserName: 'internet explorer', version: "10" }
+            { browserName: 'internet explorer', version: "9" }
+            { browserName: 'internet explorer', version: "8" }
+            { browserName: 'internet explorer', version: "7" }
+            { browserName: 'internet explorer', version: "6" }
+            { browserName: 'internet explorer', version: "5" }
           ]
           testname: "mocha tests"
      
