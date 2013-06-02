@@ -8,9 +8,9 @@ before_script:
 script: grunt test-cloud
 env:
   global:
-  - secure: ! 'JzRQXQDgjIGUeCOJV6IzhfH3Ud3y6icC7Zmz1mgNT8D5A8yCnk1VG/YfypfO
-      n1ZYs/NryWnX6pNecpI0JGkffsPy3dieMH8nUe7tpxZKArbp/C1MvpKTXiN3
-      CrHG2UM6rFxy0xo63SKV88VhMIW64dYYeJzd0xvzGMQZgK1ObA0='
-  - secure: ! 'YmW5kKnle+RBlvvsf9B/uW3+B9NMoTaxID3mV7EANtaVXqsj+6TuXiHIEXz2
-      zRd9cWxuZd4VZDDFyX+aA0X1mQBYJo2VC34f4vFBT9oiErwcvnerS+oLDDQ2
-      /biBwPQ9S+1+h6wagt75fMKt66xdz21p8DlmZVvvgSK5ycFBs8s='
+  - secure: ! 'tApsQdAQ10rWureErvQwbzPwjRYWUYceuLkV4a3+oxlVqLKNawuQllxF2xRv
+      bA6sdNUeULX2kR244+kgaj3cXZdbJNr/XCRi0v2Jp/ij4OPe0vfi5Tg1RE5g
+      GIxc54B8/mCfADHoZa9Zw3N8PPmUl7B2me1GvVOsvsQhBJ5e1s8='
+  - secure: ! 'rEkps7N4NR0QfeL2eGt3riFVd5rkV7i/luovVmch8gqgzUr880CABPnhfjfr
+      W/lbXtzB4tUR8esLqKZw4jmBuOCOpsO3ZszMzIXirEK4nMbvjgn6gOEvA+tM
+      9Eex1gtVWzo+Pt4oiNJ2zZLgG7D+9ASb0O57amcrjeYMz/syPRQ='
