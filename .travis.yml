@@ -1,6 +1,16 @@
+---
 language: node_js
 node_js:
-  - 0.8
+- 0.8
 before_script:
-  - export DISPLAY=:99.0
-  - sh -e /etc/init.d/xvfb start
+- export DISPLAY=:99.0
+- sh -e /etc/init.d/xvfb start
+script: grunt test-cloud
+env:
+  global:
+  - secure: ! 'JzRQXQDgjIGUeCOJV6IzhfH3Ud3y6icC7Zmz1mgNT8D5A8yCnk1VG/YfypfO
+      n1ZYs/NryWnX6pNecpI0JGkffsPy3dieMH8nUe7tpxZKArbp/C1MvpKTXiN3
+      CrHG2UM6rFxy0xo63SKV88VhMIW64dYYeJzd0xvzGMQZgK1ObA0='
+  - secure: ! 'YmW5kKnle+RBlvvsf9B/uW3+B9NMoTaxID3mV7EANtaVXqsj+6TuXiHIEXz2
+      zRd9cWxuZd4VZDDFyX+aA0X1mQBYJo2VC34f4vFBT9oiErwcvnerS+oLDDQ2
+      /biBwPQ9S+1+h6wagt75fMKt66xdz21p8DlmZVvvgSK5ycFBs8s='

@@ -7,7 +7,8 @@
 <body>
   <div id="mocha"></div>
   <script src="./mocha.js"></script>
-  <script>mocha.setup('bdd')</script>
+  <script src="./mocha-js-reporter.js"></script>
+  <script>mocha.setup({ui:"bdd", reporter:JSReporter})</script>
   <script src="./test.js"></script>
   
   <script>

@@ -7,7 +7,10 @@ module.exports = (grunt) ->
   BUILD_PATH = 'build'
   APP_PATH   = 'app'
   DEV_PATH   = "#{BUILD_PATH}/development"
+  TEST_PATH   = "#{BUILD_PATH}/test"
   JS_DEV_PATH = "#{DEV_PATH}/js"
+  DEV_PORT = 7001
+  TEST_PORT = 7002
 
   # Project configuration
   grunt.initConfig
@@ -56,10 +59,14 @@ module.exports = (grunt) ->
           ext: '.html'
         ]
     connect:
-      server:
+      development:
         options:
-          port: 8002
+          port: DEV_PORT
           base: "./#{DEV_PATH}"
+      test:
+        options:
+          port: TEST_PORT
+          base: "./#{TEST_PATH}"
     copy:
       development:
         cwd: 'components/font-awesome/'
@@ -70,6 +77,7 @@ module.exports = (grunt) ->
         files: [
           {expand: true, cwd: 'test/support/',  src: 'test.html', dest:'build/test/' }
           {expand: true, cwd: 'node_modules/mocha/', src: [ 'mocha.css', 'mocha.js' ], dest:'build/test/' }
+          {expand: true, cwd: 'node_modules/mocha-js-reporter/', src: [ 'mocha-js-reporter.js' ], dest:'build/test/' }
         ]
     watch:
       coffee:
@@ -98,6 +106,33 @@ module.exports = (grunt) ->
 
       ###
 
+    'saucelabs-mocha': 
+      all: 
+
+        options: 
+          urls: ["http://localhost:#{TEST_PORT}/test.html"]
+          tunnelTimeout: 5,
+          build: process.env.TRAVIS_JOB_ID,
+          concurrency: 3,
+          browsers: [
+            {
+              browserName: 'firefox',
+              platform: 'XP'
+            }
+            {
+              browserName: 'chrome',
+              platform: 'XP'
+            }
+            {
+              browserName: 'chrome',
+              platform: 'linux'
+            }
+          ]
+          testname: "mocha tests"
+     
+
+
+
   # Dependencies
   grunt.loadNpmTasks 'grunt-contrib-concat'
   grunt.loadNpmTasks 'grunt-contrib-connect'
@@ -111,6 +146,7 @@ module.exports = (grunt) ->
 
   grunt.loadNpmTasks 'grunt-karma'
   grunt.loadNpmTasks 'grunt-browserify2'
+  grunt.loadNpmTasks 'grunt-saucelabs' 
 
   # Aliases
   grunt.registerTask 'development', [
@@ -130,11 +166,12 @@ module.exports = (grunt) ->
 
 
   grunt.registerTask 'test', ['build:test', 'karma']
+  grunt.registerTask 'test-cloud', ['build:test', 'connect:test', 'saucelabs-mocha']
 
   grunt.registerTask 'default', [
     'development'
 #    'test'
-    'connect:server'
+    'connect:development'
     'watch'
   ]
 

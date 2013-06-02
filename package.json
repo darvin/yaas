@@ -32,7 +32,9 @@
     "grunt-browserify2": "*",
     "grunt-coffeeify": "*",
     "mocha": "1.9.0",
-    "chai": "git://github.com/chaijs/chai.git"
+    "chai": "git://github.com/chaijs/chai.git",
+    "mocha-js-reporter": "git://github.com/darvin/mocha-js-reporter.git",
+    "grunt-saucelabs": "git://github.com/darvin/grunt-saucelabs.git"
   },
 
   "testling": {
