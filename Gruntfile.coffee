@@ -115,36 +115,663 @@ module.exports = (grunt) ->
           build: process.env.TRAVIS_JOB_ID,
           concurrency: 3,
           browsers: [
-            { browserName: 'firefox', version: "21" }
-            { browserName: 'firefox', version: "20" }
-            { browserName: 'firefox', version: "19" }
-            { browserName: 'firefox', version: "18" }
-            { browserName: 'firefox', version: "17" }
-            { browserName: 'firefox', version: "16" }
-            { browserName: 'firefox', version: "15" }
-            { browserName: 'firefox', version: "14" }
-            { browserName: 'firefox', version: "13" }
-            { browserName: 'firefox', version: "12" }
-            { browserName: 'firefox', version: "11" }
-            { browserName: 'firefox', version: "10" }
-            { browserName: 'opera', version: "11" }
-            { browserName: 'opera', version: "12" }
-            { browserName: 'chrome' }
-            { browserName: 'safari', version: "5" }
-            { browserName: 'safari', version: "6" }
-            { browserName: 'android' }
-            { browserName: 'iPhone', version: "6" }
-            { browserName: 'iPhone', version: "5.1" }
-            { browserName: 'iPhone', version: "5" }
-            { browserName: 'iPhone', version: "4.3" }
-            { browserName: 'iPad' }
-            { browserName: 'internet explorer', version: "10" }
-            { browserName: 'internet explorer', version: "9" }
-            { browserName: 'internet explorer', version: "8" }
-            { browserName: 'internet explorer', version: "7" }
-            { browserName: 'internet explorer', version: "6" }
-            { browserName: 'internet explorer', version: "5" }
-          ]
+                        {
+                          "browserName": "Opera",
+                          "os": "Windows 2003",
+                          "version": "11.64."
+                        },
+                        {
+                          "browserName": "Opera",
+                          "os": "Windows 2003",
+                          "version": "12.12."
+                        },
+                        {
+                          "browserName": "Internet Explorer",
+                          "os": "Windows 2003",
+                          "version": "6.0.3790.3959."
+                        },
+                        {
+                          "browserName": "Internet Explorer",
+                          "os": "Windows 2003",
+                          "version": "8.0.6001.18702."
+                        },
+                        {
+                          "browserName": "Internet Explorer",
+                          "os": "Windows 2003",
+                          "version": "7.0.5730.13."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Windows 2003",
+                          "version": "3.0.19."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Windows 2003",
+                          "version": "3.5.19."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Windows 2003",
+                          "version": "3.6.28."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Windows 2003",
+                          "version": "4.0.1."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Windows 2003",
+                          "version": "5.0.1."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Windows 2003",
+                          "version": "6.0.2."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Windows 2003",
+                          "version": "7.0."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Windows 2003",
+                          "version": "8.0.1."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Windows 2003",
+                          "version": "9.0.1."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Windows 2003",
+                          "version": "10.0.2."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Windows 2003",
+                          "version": "11.0."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Windows 2003",
+                          "version": "12.0."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Windows 2003",
+                          "version": "13.0.1."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Windows 2003",
+                          "version": "14.0.1."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Windows 2003",
+                          "version": "15.0.1."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Windows 2003",
+                          "version": "16.0.1."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Windows 2003",
+                          "version": "17.0.1."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Windows 2003",
+                          "version": "18.0.2."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Windows 2003",
+                          "version": "19.0."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Windows 2003",
+                          "version": "20.0."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Windows 2003",
+                          "version": "21.0b1."
+                        },
+                        {
+                          "browserName": "Google Chrome",
+                          "os": "Windows 2003",
+                          "version": "26.0.1410.64."
+                        },
+                        {
+                          "browserName": "iPad",
+                          "os": "Mac",
+                          "version": "4.3."
+                        },
+                        {
+                          "browserName": "iPad",
+                          "os": "Mac",
+                          "version": "5.0."
+                        },
+                        {
+                          "browserName": "iPad",
+                          "os": "Mac",
+                          "version": "5.0."
+                        },
+                        {
+                          "browserName": "iPad",
+                          "os": "Mac",
+                          "version": "5.1."
+                        },
+                        {
+                          "browserName": "iPad",
+                          "os": "Mac",
+                          "version": "6.0."
+                        },
+                        {
+                          "browserName": "Google Chrome",
+                          "os": "Mac",
+                          "version": "26.0.1410.65."
+                        },
+                        {
+                          "browserName": "Google Chrome",
+                          "os": "Mac",
+                          "version": "26.0.1410.65."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Mac",
+                          "version": "4.0.1."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Mac",
+                          "version": "5.0.1."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Mac",
+                          "version": "6.0.2."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Mac",
+                          "version": "7.0.1."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Mac",
+                          "version": "8.0.1."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Mac",
+                          "version": "9.0."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Mac",
+                          "version": "10.0.1."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Mac",
+                          "version": "11.0."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Mac",
+                          "version": "12.0."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Mac",
+                          "version": "13.0.1."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Mac",
+                          "version": "14.0.1."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Mac",
+                          "version": "15.0.1."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Mac",
+                          "version": "16.0.2."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Mac",
+                          "version": "17.0.1."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Mac",
+                          "version": "18.0.2."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Mac",
+                          "version": "19.0."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Mac",
+                          "version": "20.0.1."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Mac",
+                          "version": "21.0b6."
+                        },
+                        {
+                          "browserName": "iPhone",
+                          "os": "Mac",
+                          "version": "4.3."
+                        },
+                        {
+                          "browserName": "iPhone",
+                          "os": "Mac",
+                          "version": "5.0."
+                        },
+                        {
+                          "browserName": "iPhone",
+                          "os": "Mac",
+                          "version": "5.0."
+                        },
+                        {
+                          "browserName": "iPhone",
+                          "os": "Mac",
+                          "version": "5.1."
+                        },
+                        {
+                          "browserName": "iPhone",
+                          "os": "Mac",
+                          "version": "6.0."
+                        },
+                        {
+                          "browserName": "Safari",
+                          "os": "Mac",
+                          "version": "5.1.7."
+                        },
+                        {
+                          "browserName": "Safari",
+                          "os": "Mac",
+                          "version": "6.0.4."
+                        },
+                        {
+                          "browserName": "Opera",
+                          "os": "Windows 2008",
+                          "version": "11.64."
+                        },
+                        {
+                          "browserName": "Opera",
+                          "os": "Windows 2008",
+                          "version": "12.12."
+                        },
+                        {
+                          "browserName": "Internet Explorer",
+                          "os": "Windows 2008",
+                          "version": "9.0.8112.16421."
+                        },
+                        {
+                          "browserName": "Internet Explorer",
+                          "os": "Windows 2008",
+                          "version": "8.0.7601.17514."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Windows 2008",
+                          "version": "3.0.19."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Windows 2008",
+                          "version": "3.5.19."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Windows 2008",
+                          "version": "3.6.28."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Windows 2008",
+                          "version": "4.0.1."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Windows 2008",
+                          "version": "5.0.1."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Windows 2008",
+                          "version": "6.0.2."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Windows 2008",
+                          "version": "7.0."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Windows 2008",
+                          "version": "8.0.1."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Windows 2008",
+                          "version": "9.0.1."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Windows 2008",
+                          "version": "10.0.2."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Windows 2008",
+                          "version": "11.0."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Windows 2008",
+                          "version": "12.0."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Windows 2008",
+                          "version": "13.0.1."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Windows 2008",
+                          "version": "14.0.1."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Windows 2008",
+                          "version": "15.0.1."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Windows 2008",
+                          "version": "16.0.1."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Windows 2008",
+                          "version": "17.0.1."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Windows 2008",
+                          "version": "18.0.2."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Windows 2008",
+                          "version": "19.0."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Windows 2008",
+                          "version": "20.0."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Windows 2008",
+                          "version": "21.0b1."
+                        },
+                        {
+                          "browserName": "Safari",
+                          "os": "Windows 2008",
+                          "version": "5.1.7."
+                        },
+                        {
+                          "browserName": "Google Chrome",
+                          "os": "Windows 2008",
+                          "version": "26.0.1410.64."
+                        },
+                        {
+                          "browserName": "Internet Explorer",
+                          "os": "Windows 2012",
+                          "version": "10.0.9200.16519."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Windows 2012",
+                          "version": "3.0.19."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Windows 2012",
+                          "version": "3.5.19."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Windows 2012",
+                          "version": "3.6.28."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Windows 2012",
+                          "version": "4.0.1."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Windows 2012",
+                          "version": "5.0.1."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Windows 2012",
+                          "version": "6.0.2."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Windows 2012",
+                          "version": "7.0."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Windows 2012",
+                          "version": "8.0.1."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Windows 2012",
+                          "version": "9.0.1."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Windows 2012",
+                          "version": "10.0.2."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Windows 2012",
+                          "version": "11.0."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Windows 2012",
+                          "version": "12.0."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Windows 2012",
+                          "version": "13.0.1."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Windows 2012",
+                          "version": "14.0.1."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Windows 2012",
+                          "version": "15.0.1."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Windows 2012",
+                          "version": "16.0.1."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Windows 2012",
+                          "version": "17.0.1."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Windows 2012",
+                          "version": "18.0.2."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Windows 2012",
+                          "version": "19.0."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Windows 2012",
+                          "version": "20.0."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Windows 2012",
+                          "version": "21.0b1."
+                        },
+                        {
+                          "browserName": "Opera",
+                          "os": "Linux",
+                          "version": "12.15."
+                        },
+                        {
+                          "browserName": "Google Chrome",
+                          "os": "Linux",
+                          "version": "26.0.1410.63."
+                        },
+                        {
+                          "browserName": "Android",
+                          "os": "Linux",
+                          "version": "4.0.4."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Linux",
+                          "version": "3.6.28."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Linux",
+                          "version": "4.0.1."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Linux",
+                          "version": "5.0.1."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Linux",
+                          "version": "6.0.2."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Linux",
+                          "version": "7.0.1."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Linux",
+                          "version": "8.0.1."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Linux",
+                          "version": "9.0.1."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Linux",
+                          "version": "10.0."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Linux",
+                          "version": "11.0."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Linux",
+                          "version": "12.0."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Linux",
+                          "version": "13.0.1."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Linux",
+                          "version": "14.0.1."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Linux",
+                          "version": "15.0.1."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Linux",
+                          "version": "16.0.1."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Linux",
+                          "version": "17.0.1."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Linux",
+                          "version": "18.0.2."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Linux",
+                          "version": "19.0."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Linux",
+                          "version": "20.0.1."
+                        },
+                        {
+                          "browserName": "Firefox",
+                          "os": "Linux",
+                          "version": "21.0."
+                        },
+                        {
+                          "browserName": "Lynx",
+                          "os": "Linux",
+                          "version": "2.8.7."
+                        }
+                      ]
+
           testname: "mocha tests"
      
 
